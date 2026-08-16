@@ -44,12 +44,16 @@ export function UserNav({ name, email, image }: UserNavProps) {
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuLabel className="font-normal">
-          <div className="flex flex-col gap-0.5">
-            <p className="text-sm font-medium">{name ?? "User"}</p>
-            <p className="truncate text-xs text-muted-foreground">{email}</p>
-          </div>
-        </DropdownMenuLabel>
+        <DropdownMenuGroup>
+          <DropdownMenuLabel className="font-normal">
+            <div className="flex flex-col gap-0.5">
+              <p className="text-sm font-medium text-foreground">
+                {name ?? "User"}
+              </p>
+              <p className="truncate text-xs text-muted-foreground">{email}</p>
+            </div>
+          </DropdownMenuLabel>
+        </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem render={<Link href="/dashboard/settings" />}>

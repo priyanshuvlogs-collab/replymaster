@@ -147,13 +147,18 @@ export default function LandingPage() {
             time building relationships.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button size="lg" render={<Link href="/signup" />}>
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={<Link href="/signup" />}
+            >
               Start for free
               <ArrowRight className="size-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
+              nativeButton={false}
               render={<Link href="#how-it-works" />}
             >
               See how it works
@@ -319,6 +324,7 @@ export default function LandingPage() {
                   <Button
                     className="mt-auto w-full"
                     variant={plan.highlighted ? "default" : "outline"}
+                    nativeButton={false}
                     render={<Link href="/signup" />}
                   >
                     {plan.cta}
@@ -345,6 +351,7 @@ export default function LandingPage() {
               size="lg"
               variant="secondary"
               className="mt-8"
+              nativeButton={false}
               render={<Link href="/signup" />}
             >
               Get started for free

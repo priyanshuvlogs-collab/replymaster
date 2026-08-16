@@ -110,7 +110,7 @@ export default async function DashboardPage() {
             Here&apos;s what&apos;s happening across your brands today.
           </p>
         </div>
-        <Button render={<Link href="/dashboard/replies" />}>
+        <Button nativeButton={false} render={<Link href="/dashboard/replies" />}>
           <Plus className="size-4" />
           New reply
         </Button>
